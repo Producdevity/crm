@@ -4,12 +4,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+// Require the main Sass manifest file
+require('./assets/sass/app.scss')
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el :         '#app',
+  el:         '#app',
   router,
-  template :   '<App/>',
-  components : {App}
+  template:   '<App/>',
+  components: {App}
 })
