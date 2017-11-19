@@ -1,29 +1,14 @@
 <template>
-  <div id="id">
-    <the-hero/>
-    <the-navbar/>
-    <section class="section">
-      <div class="container">
-        <div class="hello">
-          <h1>Welcome to Your Vue.js App</h1>
-        </div>
-        <img src="./assets/logo.png">
-        <router-view/>
-      </div>
-    </section>
+  <div id="app">
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
-  import TheHero from '@core/TheHero.vue'
-  import TheNavbar from '@core/TheNavbar.vue'
-
   export default {
-    name:       'app',
-    components: {
-      TheNavbar,
-      TheHero
-    }
+    name: 'app'
   }
 </script>
 

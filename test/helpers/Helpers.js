@@ -32,6 +32,14 @@ export class Helpers {
     this.expect(this.wrapper.contains(selector)).toBe(true)
   }
 
+  wrapperHasClass(className) {
+    this.expect(this.wrapper.hasClass(className)).toBe(true)
+  }
+
+  wrapperHasId(id) {
+    this.expect(this.wrapper.hasAttribute('id', id)).toBe(true)
+  }
+
   domHasNot(selector) {
     this.expect(this.wrapper.contains(selector)).toBe(false)
   }

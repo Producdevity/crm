@@ -12,20 +12,9 @@ describe('App', () => {
     h       = new Helpers(wrapper, expect)
   })
 
-  it('should render <the-hero/>', () => {
-    h.domHas('.hero')
-  })
-
-  it('should render <the-navbar/>', () => {
-    h.domHas('.navbar')
-  })
-
-  it('should render a .container within a .section', () => {
-    h.domHas('.section > .container')
-  })
-
   it('should render correct contents', () => {
-    h.see('Welcome to Your Vue.js App')
+    h.wrapperHasId('app')
+    h.domHasNot('.container')
   })
 
 })

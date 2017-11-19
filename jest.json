@@ -11,6 +11,9 @@
     "^@core(.*)$":       "<rootDir>/src/components/Core/$1",
     "^@pages(.*)$":      "<rootDir>/src/components/Pages/$1",
     "^@ui(.*)$":         "<rootDir>/src/components/UI/$1",
+    "^@common(.*)$":     "<rootDir>/src/common/$1",
+    "^@utils(.*)$":      "<rootDir>/src/common/utils/$1",
+    "^@helpers(.*)$":    "<rootDir>/src/common/utils/helpers/$1",
     "test-helpers(.*)$": "<rootDir>/test/helpers/$1"
   },
   "transform":            {

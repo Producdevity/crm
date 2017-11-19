@@ -28,6 +28,10 @@ module.exports = {
       '@core':        resolve('src/components/Core'),
       '@pages':       resolve('src/components/Pages'),
       '@ui':          resolve('src/components/UI'),
+      '@common':      resolve('src/common'),
+      '@lib':         resolve('src/common/bootstrap/lib'),
+      '@utils':       resolve('src/common/utils'),
+      '@helpers':     resolve('src/common/utils/helpers'),
       'test-helpers': resolve('test/helpers')
     }
   },
