@@ -1,18 +1,29 @@
 <template>
-  <section class="section" id="app">
-    <div class="container">
-      <div class="hello">
-        <h1>Welcome to Your Vue.js App</h1>
+  <div id="id">
+    <the-hero/>
+    <the-navbar/>
+    <section class="section">
+      <div class="container">
+        <div class="hello">
+          <h1>Welcome to Your Vue.js App</h1>
+        </div>
+        <img src="./assets/logo.png">
+        <router-view/>
       </div>
-      <img src="./assets/logo.png">
-      <router-view/>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
+  import TheHero from '@core/TheHero.vue'
+  import TheNavbar from '@core/TheNavbar.vue'
+
   export default {
-    name: 'app'
+    name:       'app',
+    components: {
+      TheNavbar,
+      TheHero
+    }
   }
 </script>
 

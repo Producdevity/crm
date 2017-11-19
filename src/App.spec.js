@@ -1,22 +1,31 @@
 import { mount } from 'vue-test-utils'
-import Vue from 'vue'
 import App from './App.vue'
+import { Helpers } from 'test-helpers'
 
-describe('App.vue', () => {
+
+describe('App', () => {
   let wrapper
+  let h
 
   beforeEach(() => {
     wrapper = mount(App)
+    h       = new Helpers(wrapper, expect)
+  })
+
+  it('should render <the-hero/>', () => {
+    h.domHas('.hero')
+  })
+
+  it('should render <the-navbar/>', () => {
+    h.domHas('.navbar')
   })
 
   it('should render a .container within a .section', () => {
-    expect(wrapper.find('.section > .container')).toBeDefined()
+    h.domHas('.section > .container')
   })
 
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(App)
-    const vm          = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h1').textContent).toEqual('Welcome to Your Vue.js App')
+    h.see('Welcome to Your Vue.js App')
   })
 
 })

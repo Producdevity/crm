@@ -1,11 +1,17 @@
-import Vue from 'vue'
+import { mount } from 'vue-test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
+import { Helpers } from 'test-helpers'
 
-describe('HelloWorld.vue', () => {
+describe('HelloWorld', () => {
+  let wrapper
+  let h
+
+  beforeEach(() => {
+    wrapper = mount(HelloWorld)
+    h       = new Helpers(wrapper, expect)
+  })
+
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(HelloWorld)
-    const vm          = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h1').textContent)
-        .toEqual('Welcome to Your Vue.js App')
+    h.see('Welcome to Your Vue.js App', '.hello h1')
   })
 })
